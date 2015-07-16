@@ -3738,3 +3738,1721 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (71.3ms)
   Rendered layouts/_header.html.erb (0.4ms)
 Completed 200 OK in 3219ms (Views: 3217.0ms | ActiveRecord: 0.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (24.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20150713192526)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rating" integer, "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150713192526"]]
+  [1m[36m (82.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/reviews" for 54.163.248.147 at 2015-07-13 19:30:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReviewsController#index as HTML
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"
+  Rendered reviews/index.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_header.html.erb (20.5ms)
+Completed 200 OK in 11201ms (Views: 11143.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:30:26 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:30:26 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-13 19:30:26 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:30:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:27 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:28 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:28 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:28 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:28 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:28 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:29 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:29 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:30:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToReviews (20150713193507)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "reviews" ADD "user_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150713193507"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/users/sign_in" for 54.163.248.147 at 2015-07-13 19:46:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (103.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 894ms (Views: 826.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 54.163.248.147 at 2015-07-13 19:46:27 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ORpWS22O8z8CLIApVE2le2E7yMo7bECSlASWiw4yXo=", "user"=>{"email"=>"zurihunter92@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'zurihunter92@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2015-07-13 19:46:27.662363"], ["last_sign_in_at", "2015-07-02 12:49:07.931180"], ["last_sign_in_ip", "50.197.17.145"], ["sign_in_count", 3], ["updated_at", "2015-07-13 19:46:27.663863"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/
+Completed 302 Found in 299ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-13 19:46:27 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (41.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 492ms (Views: 473.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:28 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:30 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:30 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:30 +0000
+
+
+Started GET "/reviews" for 54.163.248.147 at 2015-07-13 19:46:38 +0000
+Processing by ReviewsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 444ms (Views: 428.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:39 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:40 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:40 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:40 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:41 +0000
+
+
+Started GET "/reviews/new" for 54.163.248.147 at 2015-07-13 19:46:42 +0000
+Processing by ReviewsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered reviews/_form.html.erb (33.5ms)
+  Rendered reviews/new.html.erb within layouts/application (34.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 414ms (Views: 411.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/reviews" for 54.163.248.147 at 2015-07-13 19:46:52 +0000
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sWZ+XndxnsKXl3LdK7/ADsTKVymqb9KIxQscQmVR0Mg=", "review"=>{"rating"=>"4", "comment"=>"Its was border line good"}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "rating", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["comment", "Its was border line good"], ["created_at", "2015-07-13 19:46:52.915986"], ["rating", 4], ["updated_at", "2015-07-13 19:46:52.915986"], ["user_id", 1]]
+  [1m[35m (7.8ms)[0m  commit transaction
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/reviews/1
+Completed 302 Found in 25ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/reviews/1" for 54.163.248.147 at 2015-07-13 19:46:52 +0000
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT  "reviews".* FROM "reviews"  WHERE "reviews"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/show.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 448ms (Views: 437.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:46:53 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:46:54 +0000
+
+
+Started GET "/reviews" for 54.163.248.147 at 2015-07-13 19:46:57 +0000
+Processing by ReviewsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 414ms (Views: 403.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/reviews/1" for 54.163.248.147 at 2015-07-13 19:50:12 +0000
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sWZ+XndxnsKXl3LdK7/ADsTKVymqb9KIxQscQmVR0Mg=", "id"=>"1"}
+  [1m[35mReview Load (0.2ms)[0m  SELECT  "reviews".* FROM "reviews"  WHERE "reviews"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 1]]
+  [1m[35m (15.4ms)[0m  commit transaction
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/
+Completed 302 Found in 88ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-13 19:50:13 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (41.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 424ms (Views: 403.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:13 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:13 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:14 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:15 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:15 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:15 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:15 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:50:15 +0000
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-13 19:53:05 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (12.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 353ms (Views: 339.4ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:06 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:07 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-13 19:53:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (8.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMovieIdToReviews (20150713202012)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "reviews" ADD "movie_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150713202012"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/movies/new" for 54.163.248.147 at 2015-07-13 20:49:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered movies/_form.html.erb (22.9ms)
+  Rendered movies/new.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 347ms (Views: 304.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-13 20:49:06 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 173ms (Views: 171.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for 54.163.248.147 at 2015-07-13 20:49:08 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 148ms (Views: 146.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-13 20:49:10 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 156ms (Views: 154.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-15 22:29:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 340ms (Views: 324.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-15 22:29:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-15 22:29:29 +0000
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-15 23:02:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 308ms (Views: 293.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-15 23:02:04 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-15 23:02:04 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:05 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-15 23:02:06 +0000
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 401 Unauthorized in 20ms
+
+
+Started GET "/users/sign_in" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 166ms (Views: 155.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:22 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:23 +0000
+
+
+Started POST "/users/sign_in" for 54.163.248.147 at 2015-07-15 23:29:34 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KeHCZdrsFsASgTebfE1ioCn9ZdMBIafWA+eWAJiEI5s=", "user"=>{"email"=>"zurihunter92@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'zurihunter92@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2015-07-15 23:29:34.220690"], ["current_sign_in_ip", "98.204.80.250"], ["last_sign_in_at", "2015-07-13 19:46:27.662363"], ["sign_in_count", 4], ["updated_at", "2015-07-15 23:29:34.222263"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/movies/3/reviews/new
+Completed 302 Found in 111ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-15 23:29:34 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (12.2ms)
+  Rendered reviews/new.html.erb within layouts/application (29.7ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined local variable or method `reviews_path' for #<#<Class:0x00000004b8e7d8>:0x00000004b8dd60>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', reviews_path %>
+  app/views/reviews/new.html.erb:5:in `_app_views_reviews_new_html_erb___1418077168426482075_39609560'
+
+
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (5.9ms)
+  Rendered reviews/new.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 135ms (Views: 132.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-15 23:29:50 +0000
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-16 00:01:21 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 151ms (Views: 145.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:01:23 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 120ms (Views: 118.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-16 00:01:28 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (5.4ms)
+  Rendered reviews/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 134.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (2.1ms)
+  Rendered reviews/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 122.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:02:44 +0000
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:02:46 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 138ms (Views: 135.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:14:07 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 133ms (Views: 130.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:09 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:09 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:14:09 +0000
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-16 00:14:15 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (2.1ms)
+  Rendered reviews/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 131.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:14:19 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-16 00:18:27 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (5.1ms)
+  Rendered reviews/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 118.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/movies/3/reviews" for 54.163.248.147 at 2015-07-16 00:18:40 +0000
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYl8NRTE5iK9KLLvQ9V5wHxJiAZcpfT2Z30F6e5lA1w=", "review"=>{"rating"=>"3", "comment"=>"Dont waste your money."}, "commit"=>"Create Review", "movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `movie' for #<ReviewsController:0x007f843c1bebb8>):
+  app/controllers/reviews_controller.rb:18:in `create'
+
+
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered .bundle/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started POST "/movies/3/reviews" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYl8NRTE5iK9KLLvQ9V5wHxJiAZcpfT2Z30F6e5lA1w=", "review"=>{"rating"=>"3", "comment"=>"Dont waste your money."}, "commit"=>"Create Review", "movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "movie_id", "rating", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "Dont waste your money."], ["created_at", "2015-07-16 00:21:48.464711"], ["movie_id", 3], ["rating", 3], ["updated_at", "2015-07-16 00:21:48.464711"], ["user_id", 1]]
+  [1m[35m (7.2ms)[0m  commit transaction
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/movies/3
+Completed 302 Found in 38ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" IS NULL  ORDER BY created_at DESC
+  Rendered movies/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 127ms (Views: 124.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:21:48 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:21:49 +0000
+
+
+Started GET "/movies/3/reviews/new" for 54.163.248.147 at 2015-07-16 00:21:51 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (2.5ms)
+  Rendered reviews/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 137.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/movies/3/reviews" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYl8NRTE5iK9KLLvQ9V5wHxJiAZcpfT2Z30F6e5lA1w=", "review"=>{"rating"=>"3", "comment"=>"Dont waste your money or time"}, "commit"=>"Create Review", "movie_id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "movie_id", "rating", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "Dont waste your money or time"], ["created_at", "2015-07-16 00:22:05.205117"], ["movie_id", 3], ["rating", 3], ["updated_at", "2015-07-16 00:22:05.205117"], ["user_id", 1]]
+  [1m[35m (7.5ms)[0m  commit transaction
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/movies/3
+Completed 302 Found in 13ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" IS NULL  ORDER BY created_at DESC
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:22:05 +0000
+
+
+Started GET "/movies/3" for 54.163.248.147 at 2015-07-16 00:23:05 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = 3  ORDER BY created_at DESC[0m
+  Rendered movies/show.html.erb within layouts/application (6.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (8.6ms)
+Completed 200 OK in 160ms (Views: 144.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:23:06 +0000
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-16 00:25:20 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 141ms (Views: 140.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/5" for 54.163.248.147 at 2015-07-16 00:25:22 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = 5  ORDER BY created_at DESC
+  Rendered movies/show.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 134ms (Views: 132.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/5/reviews/new" for 54.163.248.147 at 2015-07-16 00:25:24 +0000
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie_id"=>"5"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered reviews/_form.html.erb (6.2ms)
+  Rendered reviews/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 140ms (Views: 128.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/movies/5/reviews" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYl8NRTE5iK9KLLvQ9V5wHxJiAZcpfT2Z30F6e5lA1w=", "review"=>{"rating"=>"5", "comment"=>"Best thing out there currently."}, "commit"=>"Create Review", "movie_id"=>"5"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reviews" ("comment", "created_at", "movie_id", "rating", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "Best thing out there currently."], ["created_at", "2015-07-16 00:25:37.426547"], ["movie_id", 5], ["rating", 5], ["updated_at", "2015-07-16 00:25:37.426547"], ["user_id", 1]]
+  [1m[35m (5.6ms)[0m  commit transaction
+Redirected to http://ruby-on-rails-109954.nitrousapp.com:3000/movies/5
+Completed 302 Found in 12ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/movies/5" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = 5  ORDER BY created_at DESC
+  Rendered movies/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 141ms (Views: 138.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:37 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:25:38 +0000
+
+
+Started GET "/" for 54.163.248.147 at 2015-07-16 00:25:58 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 140.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/5" for 54.163.248.147 at 2015-07-16 00:27:27 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = 5  ORDER BY created_at DESC[0m
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 1243ms (Views: 1240.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/5" for 54.163.248.147 at 2015-07-16 00:27:28 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews"  WHERE "reviews"."movie_id" = 5  ORDER BY created_at DESC
+  Rendered movies/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/application.css?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/reviews.css?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 54.163.248.147 at 2015-07-16 00:27:29 +0000
